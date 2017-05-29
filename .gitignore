@@ -98,5 +98,8 @@ local.properties
 .gradle
 build/
 
+### Mac ###
+.ds_store
+
 ### ProjectData ###
 rsc/resources/authentication/*
