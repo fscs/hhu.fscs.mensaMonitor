@@ -21,9 +21,6 @@ public class MensaHttpClient {
      * @throws IOException
      */
     public String sendRequest(String urlSpec, String userpass) throws IOException {
-        //"http://cms1.rz.uni-duesseldorf.de/App/SpeisePlan/speiseplan.xml"
-        //"hhu-app" + ":" + "awedxy12"
-
         URL url = new URL(urlSpec);
         URLConnection uc = url.openConnection();
         String basicAuth = "Basic " + new Base64().encode(userpass.getBytes());
