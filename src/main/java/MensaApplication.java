@@ -17,7 +17,7 @@ public class MensaApplication extends Application {
         MensaXml mensaXml = new MensaXml();
         mensaXml.getMealsByMensa(Mensa.GREAT_MENSA,
                 mensaXml.getMealsByDateTime(LocalDate.now(), mensaXml.receiveMeals()))
-                .forEach(meal -> System.out.println(meal.toString()));
+                .forEach(System.out::println);
     }
 
     public static void main(String[] args) {
