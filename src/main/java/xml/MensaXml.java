@@ -69,7 +69,7 @@ public class MensaXml {
     public ArrayList<Meal> getMealsByDateTime(LocalDate date, ArrayList<Meal> plist) {
         ArrayList<Meal> list = (ArrayList<Meal>) plist.clone();
         return (ArrayList<Meal>) list.stream()
-                .filter(m -> m.dateTime.toLocalDate().equals(date))
+                .filter(m -> m.getAvailabilityDate().toLocalDate().equals(date))
                 .collect(Collectors.toList());
     }
 
@@ -80,7 +80,7 @@ public class MensaXml {
     public ArrayList<Meal> getMealsByMensa(Mensa mensa, ArrayList<Meal> plist) {
         ArrayList<Meal> list = (ArrayList<Meal>) plist.clone();
         return (ArrayList<Meal>) list.stream()
-                .filter(m -> m.mensa.equals(hashMap.get(mensa)))
+                .filter(m -> m.getMensaName().equals(hashMap.get(mensa)))
                 .collect(Collectors.toList());
     }
 }
