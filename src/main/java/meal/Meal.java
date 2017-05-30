@@ -9,18 +9,17 @@ import java.time.format.DateTimeFormatter;
 public class Meal {
     private double priceStudent;
     private double priceEmployee;
-    private String name;
-    private String mensa;
-    private String ingredients;
-    private String pictureUrl;
-    private LocalDateTime dateTime;
+    private String name, ingredients, pictureUrl, foodBar;
+    public String mensa;
+    public LocalDateTime dateTime;
 
     public Meal(String priceStudent, String priceEmployee, String name, String mensa, String ingredients,
-                String pictureUrl, String date) {
+                String pictureUrl, String date, String foodBar) {
         this.name = name;
         this.mensa = mensa;
         this.ingredients = ingredients;
         this.pictureUrl = pictureUrl;
+        this.foodBar = foodBar;
         priceStudent = priceStudent.replace(",", ".");
         priceEmployee = priceEmployee.replace(",", ".");
         this.priceStudent = Double.parseDouble(priceStudent);
@@ -39,6 +38,7 @@ public class Meal {
         string += "Price Student: " + priceStudent + "\n";
         string += "Price Employee: " + priceEmployee + "\n";
         string += "Date: " + dateTime.toString() + "\n";
+        string += "FoodBar: " + foodBar + "\n";
         string += "URL: " + pictureUrl + "\n";
         return string;
     }

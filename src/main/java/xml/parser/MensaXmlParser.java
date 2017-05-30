@@ -50,13 +50,12 @@ public class MensaXmlParser {
                         eElement.getAttribute("MENSA"),
                         eElement.getAttribute("ZSNAMEN"),
                         eElement.getAttribute("PFAD"),
-                        eElement.getAttribute("DATUM")
+                        eElement.getAttribute("DATUM"),
+                        eElement.getAttribute("SPEISE")
                 ));
             }
-            System.out.println(mealList.get(i));
-            System.out.println();
         }
-
         return mealList;
     }
+
 }
