@@ -75,7 +75,6 @@ public class MensaXml {
 
     /**
      * @return
-     * @Todo
      */
     public ArrayList<Meal> getMealsByMensa(Mensa mensa, ArrayList<Meal> plist) {
         ArrayList<Meal> list = (ArrayList<Meal>) plist.clone();
